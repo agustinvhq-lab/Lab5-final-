@@ -10,3 +10,42 @@ Thu May 14 08:01:27 PM UTC 2026:
  tests:  0|6
 ========================================
 ed08ecc
+Thu May 14 08:10:57 PM UTC 2026: 
+ graph.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:52:5: error: unknown type name ‘Pair’
+   52 |     Pair * pair = map_search(g->adjacencyMap, label1);
+      |     ^~~~
+graph.c:52:47: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   52 |     Pair * pair = map_search(g->adjacencyMap, label1);
+      |                                               ^~~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+graph.c:52:19: error: initialization of ‘int *’ from incompatible pointer type ‘MapPair *’ [-Wincompatible-pointer-types]
+   52 |     Pair * pair = map_search(g->adjacencyMap, label1);
+      |                   ^~~~~~~~~~
+graph.c:53:18: error: implicit declaration of function ‘first_list’ [-Wimplicit-function-declaration]
+   53 |     Edge * aux = first_list(pair->Edge);
+      |                  ^~~~~~~~~~
+graph.c:53:33: error: request for member ‘Edge’ in something not a structure or union
+   53 |     Edge * aux = first_list(pair->Edge);
+      |                                 ^~
+graph.c:56:42: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   56 |         if (is_equal_string(aux->target, label2) == 0) return aux->weight;
+      |                                          ^~~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+graph.c:58:9: error: implicit declaration of function ‘next_list’ [-Wimplicit-function-declaration]
+   58 |         next_list(pair->Edge);
+      |         ^~~~~~~~~
+graph.c:58:23: error: request for member ‘Edge’ in something not a structure or union
+   58 |         next_list(pair->Edge);
+      |                       ^~
+cc1: all warnings being treated as errors
+35584ab
