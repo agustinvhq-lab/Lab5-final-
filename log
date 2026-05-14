@@ -271,3 +271,16 @@ graph.c:59:9: error: implicit declaration of function ‘next_list’ [-Wimplici
    59 |         next_list(pair->value);
       |         ^~~~~~~~~
 c9eee4a
+Thu May 14 08:20:32 PM UTC 2026: 
+ graph.c | 3 +++
+ 1 file changed, 3 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:59:36: error: ‘Edge’ has no member named ‘key’
+   59 |             if (is_equal_string(aux->key, (char *)label2) == 0) return aux->weight;
+      |                                    ^~
+graph.c:61:13: error: implicit declaration of function ‘next_list’ [-Wimplicit-function-declaration]
+   61 |             next_list(pair->value);
+      |             ^~~~~~~~~
+2f9be05
