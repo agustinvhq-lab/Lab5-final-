@@ -242,3 +242,19 @@ graph.c:58:9: error: implicit declaration of function ‘next_list’ [-Wimplici
       |         ^~~~~~~~~
 cc1: all warnings being treated as errors
 de75748
+Thu May 14 08:17:20 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:56:32: error: invalid use of incomplete typedef ‘List’
+   56 |         if (is_equal_string(aux->key, (char *)label2) == 0) return aux->weight;
+      |                                ^~
+graph.c:56:71: error: invalid use of incomplete typedef ‘List’
+   56 |         if (is_equal_string(aux->key, (char *)label2) == 0) return aux->weight;
+      |                                                                       ^~
+graph.c:58:9: error: implicit declaration of function ‘next_list’ [-Wimplicit-function-declaration]
+   58 |         next_list(pair->value);
+      |         ^~~~~~~~~
+47dbdfc
