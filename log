@@ -49,3 +49,36 @@ graph.c:58:23: error: request for member ‘Edge’ in something not a structure
       |                       ^~
 cc1: all warnings being treated as errors
 35584ab
+Thu May 14 08:11:32 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:52:50: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   52 |     MapPair * pair = map_search(g->adjacencyMap, label1);
+      |                                                  ^~~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+graph.c:53:18: error: implicit declaration of function ‘first_list’ [-Wimplicit-function-declaration]
+   53 |     Edge * aux = first_list(pair->Edge);
+      |                  ^~~~~~~~~~
+graph.c:53:33: error: ‘MapPair’ has no member named ‘Edge’
+   53 |     Edge * aux = first_list(pair->Edge);
+      |                                 ^~
+graph.c:56:42: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   56 |         if (is_equal_string(aux->target, label2) == 0) return aux->weight;
+      |                                          ^~~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+graph.c:58:9: error: implicit declaration of function ‘next_list’ [-Wimplicit-function-declaration]
+   58 |         next_list(pair->Edge);
+      |         ^~~~~~~~~
+graph.c:58:23: error: ‘MapPair’ has no member named ‘Edge’
+   58 |         next_list(pair->Edge);
+      |                       ^~
+cc1: all warnings being treated as errors
+5f500d8
