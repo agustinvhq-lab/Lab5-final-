@@ -53,7 +53,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     List * aux = list_first(pair->value);
     while(aux != NULL){
     
-        if (is_equal_string(aux->target, label2) == 0) return aux->weight;
+        if (is_equal_string(aux->key, label2) == 0) return aux->weight;
 
         next_list(pair->value);
     }
