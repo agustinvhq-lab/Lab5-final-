@@ -355,3 +355,25 @@ Sat May 16 04:39:55 PM UTC 2026:
  tests:  2|4
 ========================================
 812f3a3
+Sat May 16 04:50:40 PM UTC 2026: 
+ graph.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:55:58: error: ‘label1’ undeclared (first use in this function); did you mean ‘label’?
+   55 |     MapPair * pair = map_search(g->adjacencyMap, (char *)label1);
+      |                                                          ^~~~~~
+      |                                                          label
+graph.c:55:58: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:56:30: error: unused variable ‘lista’ [-Werror=unused-variable]
+   56 |     if (pair != NULL) {List* lista = pair->value;}
+      |                              ^~~~~
+graph.c:58:12: error: ‘lista’ undeclared (first use in this function)
+   58 |     return lista;
+      |            ^~~~~
+graph.c:59:1: error: control reaches end of non-void function [-Werror=return-type]
+   59 | }
+      | ^
+cc1: all warnings being treated as errors
+6619108
