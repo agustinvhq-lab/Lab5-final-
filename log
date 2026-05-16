@@ -410,3 +410,17 @@ Sat May 16 04:55:28 PM UTC 2026:
  1 file changed, 4 insertions(+), 4 deletions(-)
  tests:  0|0
 82775cb
+Sat May 16 05:06:26 PM UTC 2026: 
+ graph.c | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:54:17: error: ‘aux’ may be used uninitialized [-Werror=maybe-uninitialized]
+   54 |     aux->weight = weight;
+      |     ~~~~~~~~~~~~^~~~~~~~
+graph.c:53:11: note: ‘aux’ was declared here
+   53 |     Edge* aux;
+      |           ^~~
+cc1: all warnings being treated as errors
+51ef8fb
