@@ -28,12 +28,13 @@ int is_equal_string(void *key1, void *key2) {
 
 Graph* createGraph() {
 
-    //Graph* grafo = (Graph*)malloc(sizeof(Graph));
+    Graph* grafo = (Graph*)malloc(sizeof(Graph));
 
-    //grafo->adjacencyMap = map_create(is_equal_string);
+    if (grafo == NULL) return NULL;
+
+    grafo->adjacencyMap = map_create(is_equal_string);
     
-    //return grafo;
-    return NULL;
+    return grafo;
 }
 
 void addNode(Graph* g, const char* label) {
@@ -47,17 +48,17 @@ void addNode(Graph* g, const char* label) {
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
 
-    MapPair* pair = map_search(g->adjacencyMap, (char*)src);
-    if (pair == NULL) return;
+    //MapPair* pair = map_search(g->adjacencyMap, (char*)src);
+    //if (pair == NULL) return;
     
-    Edge* aux = (Edge*)malloc(sizeof(Edge));
-    aux->weight = weight;
-    aux->target = (char*)malloc(sizeof(char) * (strlen(dest) + 1));
-    strcpy(aux->target, dest);
+    //Edge* aux = (Edge*)malloc(sizeof(Edge));
+    //aux->weight = weight;
+    //aux->target = (char*)malloc(sizeof(char) * (strlen(dest) + 1));
+    //strcpy(aux->target, dest);
 
-    List* lista = pair->value;
+    //List* lista = pair->value;
 
-    list_pushBack(lista, aux);
+    //list_pushBack(lista, aux);
 }
 
 List* getEdges(Graph* g, const char* label) {
