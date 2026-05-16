@@ -39,6 +39,9 @@ Graph* createGraph() {
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
 
+    List* adyacentes = list_create();
+
+    map_insert(g->adjacencyMap, label, adyacentes);
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
