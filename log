@@ -499,3 +499,23 @@ Sat May 16 05:33:15 PM UTC 2026:
  tests:  3|3
 ========================================
 3826a6c
+Sat May 16 05:36:34 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:55:49: error: invalid type argument of unary ‘*’ (have ‘size_t’ {aka ‘long unsigned int’})
+   55 |     aux->target = (char*)malloc(sizeof( ((char) * strlen(dest + 1)) );
+      |                                                 ^~~~~~~~~~~~~~~~~~
+graph.c:55:70: error: expected ‘)’ before ‘;’ token
+   55 |     aux->target = (char*)malloc(sizeof( ((char) * strlen(dest + 1)) );
+      |                                ~                                     ^
+      |                                                                      )
+graph.c:58:40: error: expected ‘;’ before ‘}’ token
+   58 |     list_pushCurrent(pair->value, aux);
+      |                                        ^
+      |                                        ;
+   59 | }
+      | ~                                       
+65d5529
