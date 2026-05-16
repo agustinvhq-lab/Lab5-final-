@@ -312,3 +312,14 @@ Sat May 16 02:32:37 AM UTC 2026:
  tests:  1|5
 ========================================
 28e35e1
+Sat May 16 04:15:40 PM UTC 2026: 
+ graph.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:33:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   33 |     Map* grafo->adjacencyMap = map_create(is_equal_string);
+      |               ^~
+graph.c:33:15: error: expected expression before ‘->’ token
+3a47c2a
