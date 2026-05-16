@@ -53,7 +53,8 @@ List* getEdges(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
     MapPair * pair = map_search(g->adjacencyMap, (char *)label);
-    if (pair != NULL) {List* lista = pair->value;}
+    
+    List* lista = pair->value;
     
     return lista;
 }
