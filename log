@@ -447,3 +447,17 @@ list.h:23:38: note: expected ‘void *’ but argument is of type ‘Edge’
    23 | void list_pushCurrent(List *L, void *dato);
       |                                ~~~~~~^~~~
 2acfde8
+Sat May 16 05:07:48 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:54:17: error: ‘aux’ may be used uninitialized [-Werror=maybe-uninitialized]
+   54 |     aux->weight = weight;
+      |     ~~~~~~~~~~~~^~~~~~~~
+graph.c:53:11: note: ‘aux’ was declared here
+   53 |     Edge* aux;
+      |           ^~~
+cc1: all warnings being treated as errors
+63a40e5

@@ -50,7 +50,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     MapPair* pair = map_search(g->adjacencyMap, (char*)src);
     if (pair == NULL) return;
     
-    Edge aux;
+    Edge* aux;
     aux->weight = weight;
     strcpy(aux->target, dest);
 
