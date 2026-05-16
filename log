@@ -472,3 +472,24 @@ Sat May 16 05:31:11 PM UTC 2026:
  tests:  3|3
 ========================================
 177422d
+Sat May 16 05:32:43 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:55:48: error: expected ‘)’ before ‘strlen’
+   55 |     aux->target = (char*)malloc(sizeof(char * (strlen(dest) + 1));
+      |                                                ^~~~~~
+      |                                                )
+graph.c:55:66: error: expected ‘)’ before ‘;’ token
+   55 |     aux->target = (char*)malloc(sizeof(char * (strlen(dest) + 1));
+      |                                ~                                 ^
+      |                                                                  )
+graph.c:58:40: error: expected ‘;’ before ‘}’ token
+   58 |     list_pushCurrent(pair->value, aux);
+      |                                        ^
+      |                                        ;
+   59 | }
+      | ~                                       
+914fb4b
