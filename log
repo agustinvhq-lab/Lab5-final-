@@ -424,3 +424,26 @@ graph.c:53:11: note: ‘aux’ was declared here
       |           ^~~
 cc1: all warnings being treated as errors
 51ef8fb
+Sat May 16 05:07:40 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:54:8: error: invalid type argument of ‘->’ (have ‘Edge’)
+   54 |     aux->weight = weight;
+      |        ^~
+graph.c:55:15: error: invalid type argument of ‘->’ (have ‘Edge’)
+   55 |     strcpy(aux->target, dest);
+      |               ^~
+graph.c:57:35: error: incompatible type for argument 2 of ‘list_pushCurrent’
+   57 |     list_pushCurrent(pair->value, aux);
+      |                                   ^~~
+      |                                   |
+      |                                   Edge
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:23:38: note: expected ‘void *’ but argument is of type ‘Edge’
+   23 | void list_pushCurrent(List *L, void *dato);
+      |                                ~~~~~~^~~~
+2acfde8
