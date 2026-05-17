@@ -648,3 +648,14 @@ Sun May 17 03:17:29 AM UTC 2026:
  1 file changed, 3 insertions(+), 1 deletion(-)
  tests:  0|0
 95450c8
+Sun May 17 03:18:04 AM UTC 2026: 
+ graph.c | 2 --
+ 1 file changed, 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:46:33: error: ‘nombre’ undeclared (first use in this function)
+   46 |     map_insert(g->adjacencyMap, nombre, adyacentes);
+      |                                 ^~~~~~
+graph.c:46:33: note: each undeclared identifier is reported only once for each function it appears in
+645a8a7
