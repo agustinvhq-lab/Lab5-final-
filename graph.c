@@ -99,9 +99,9 @@ List* getAdjacentLabels(Graph* g, const char* label) {
     Map* mapa = g->adjacencyMap;
     MapPair* aux = map_first(mapa);
 
-    while(aux! = NULL)
+    while(aux != NULL)
     {
-        if (!is_equal_string(aux->key, label)) 
+        if (!is_equal_string(aux->key, (char*)label)) 
         {    
             List* lista = aux->value;
             Edge* aux2 = list_first(lista);

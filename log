@@ -577,3 +577,17 @@ graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char
       |                                 ~~~~~~^~~~
 cc1: all warnings being treated as errors
 66de25a
+Sun May 17 01:58:44 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:111:51: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+  111 |                 if (is_equal_string(aux2->target, label))
+      |                                                   ^~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+cc1: all warnings being treated as errors
+3a6e41c
