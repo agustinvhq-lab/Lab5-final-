@@ -664,3 +664,14 @@ Sun May 17 03:18:23 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 c38bff9
+Sun May 17 03:21:26 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘destroyGraph’:
+graph.c:137:15: error: unused variable ‘label’ [-Werror=unused-variable]
+  137 |         char* label = (char*)pair->key;
+      |               ^~~~~
+cc1: all warnings being treated as errors
+b960f92
