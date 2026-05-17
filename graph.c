@@ -43,7 +43,7 @@ void addNode(Graph* g, const char* label) {
 
     List* adyacentes = list_create();
     
-    map_insert(g->adjacencyMap, nombre, adyacentes);
+    map_insert(g->adjacencyMap, (void*)label, adyacentes);
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {

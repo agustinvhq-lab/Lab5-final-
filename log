@@ -659,3 +659,8 @@ graph.c:46:33: error: ‘nombre’ undeclared (first use in this function)
       |                                 ^~~~~~
 graph.c:46:33: note: each undeclared identifier is reported only once for each function it appears in
 645a8a7
+Sun May 17 03:18:23 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+c38bff9
