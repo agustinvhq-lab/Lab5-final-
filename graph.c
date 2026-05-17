@@ -94,21 +94,32 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
-    //Map* mapa = g->adjacencyMap;
-    //MapPair* aux = map_first(mapa);
+    List* listaAdyacentes = list_create();
+    
+    Map* mapa = g->adjacencyMap;
+    MapPair* aux = map_first(mapa);
 
-    //while(aux! = NULL)
-    //{
-        //List* lista = aux->value;
-        //Edge* aux2 = list_first();
+    while(aux! = NULL)
+    {
+        if (!is_equal_string(aux->key, label)) 
+        {    
+            List* lista = aux->value;
+            Edge* aux2 = list_first(lista);
 
-        //while(aux2 != NULL)
-        //{
-            
-        //}
+            while(aux2 != NULL)
+            {
+                if (is_equal_string(aux2->target, label))
+                {
+                    list_pushBack(listaAdyacentes, aux->key);
+                    break;
+                }
+
+                list_next(lista);
+            }
+        } 
         
-        //aux = map_next(mapa);    
-    //}
+        aux = map_next(mapa);    
+    }
     
     return NULL; 
 }
