@@ -121,7 +121,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
         aux = map_next(mapa);    
     }
     
-    return NULL; 
+    return listaAdyacentes; 
 }
 
 void destroyGraph(Graph* g) {
