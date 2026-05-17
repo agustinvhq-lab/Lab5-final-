@@ -49,7 +49,7 @@ void addNode(Graph* g, const char* label) {
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
     
-    MapPair* pair = map_search(g->adjacencyMap, src);
+    MapPair* pair = map_search(g->adjacencyMap, (char*)src);
     if (pair == NULL) return;
     
     Edge* aux = (Edge*)malloc(sizeof(Edge));
@@ -88,7 +88,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 
             if (is_equal_string(aux->target, (char *)label2)) return aux->weight;
 
-            list_next(pair->value);
+            aux = list_next(lista);
         }
     }
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
