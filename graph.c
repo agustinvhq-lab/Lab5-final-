@@ -41,6 +41,9 @@ Graph* createGraph() {
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
 
+    MapPair* busqueda = map_search(g->adjacencyMap, (char*)label);
+    if (busqueda != NULL) return;
+
     List* adyacentes = list_create();
     
     map_insert(g->adjacencyMap, (void*)label, adyacentes);
