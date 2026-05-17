@@ -119,7 +119,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
                     break;
                 }
 
-                list_next(lista);
+                aux2 = list_next(lista);
             }
         } 
         
