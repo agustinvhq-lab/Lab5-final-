@@ -108,7 +108,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
 
             while(aux2 != NULL)
             {
-                if (is_equal_string(aux2->target, label))
+                if (is_equal_string(aux2->target, (char*)label))
                 {
                     list_pushBack(listaAdyacentes, aux->key);
                     break;
